@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>妖狐魔法师-奇幻世界设定与角色创作指南</title>
+    <meta name="description" content="探索妖狐魔法师的奇幻设定，了解妖狐血脉与魔法体系的融合、角色创作思路、经典作品解析与世界观构建技巧，为你的故事注入神秘魅力。">
+    <meta name="keywords" content="妖狐魔法师,妖狐,魔法师,奇幻设定,角色创作,世界观,奇幻文学,狐妖,魔法体系">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "Georgia", "Noto Serif SC", "Source Han Serif SC", "SimSun", serif;
+            background: #f5f0e8;
+            color: #2d2a26;
+            line-height: 1.7;
+        }
+        .wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* 头部 */
+        .site-header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            padding: 18px 0;
+            border-bottom: 3px solid #e6a756;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .brand-icon {
+            font-size: 2rem;
+            color: #e6a756;
+        }
+        .brand-name {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #f0e6d2;
+            letter-spacing: 1px;
+        }
+        .brand-name small {
+            display: block;
+            font-size: 0.7rem;
+            font-weight: normal;
+            color: #b0a58a;
+            letter-spacing: 2px;
+        }
+        .main-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+        .main-nav a {
+            color: #d4c9b0;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+            border: 1px solid transparent;
+        }
+        .main-nav a:hover {
+            background: rgba(230, 167, 86, 0.15);
+            color: #e6a756;
+            border-color: #e6a756;
+        }
+        .main-nav .active a {
+            background: #e6a756;
+            color: #1a1a2e;
+            font-weight: bold;
+        }
+        /* 首屏 Hero */
+        .hero {
+            background: linear-gradient(145deg, #2b1b3d 0%, #3a2a4a 40%, #6b3f2a 100%);
+            color: #f5ead6;
+            padding: 80px 0 100px;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: -30px;
+            right: -20px;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(230,167,86,0.25) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .hero::after {
+            content: "";
+            position: absolute;
+            bottom: -60px;
+            left: -30px;
+            width: 250px;
+            height: 250px;
+            background: radial-gradient(circle, rgba(255,180,120,0.2) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .hero-kicker {
+            display: inline-block;
+            background: rgba(230, 167, 86, 0.2);
+            border: 1px solid #e6a756;
+            color: #e6a756;
+            padding: 6px 20px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            letter-spacing: 3px;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+        }
+        .hero h1 {
+            font-size: 3.2rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            line-height: 1.2;
+        }
+        .hero h1 span {
+            color: #e6a756;
+        }
+        .hero p {
+            font-size: 1.15rem;
+            color: #d4c9b0;
+            max-width: 640px;
+            margin: 0 auto 30px;
+            line-height: 1.8;
+        }
+        .btn-group {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+            font-size: 0.95rem;
+        }
+        .btn-primary {
+            background: #e6a756;
+            color: #1a1a2e;
+        }
+        .btn-primary:hover {
+            background: #f0b866;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(230,167,86,0.3);
+        }
+        .btn-outline {
+            border-color: #e6a756;
+            color: #e6a756;
+        }
+        .btn-outline:hover {
+            background: rgba(230,167,86,0.1);
+            transform: translateY(-2px);
+        }
+        /* 内容区块通用 */
+        .section {
+            padding: 70px 0;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: #1a1a2e;
+            margin-bottom: 10px;
+            position: relative;
+            display: inline-block;
+        }
+        .section-title h2::after {
+            content: "";
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: #e6a756;
+            border-radius: 2px;
+        }
+        .section-title p {
+            color: #7a6f5f;
+            font-size: 1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        /* 设定概览卡片 */
+        .concept-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .concept-card {
+            background: #fffdf8;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 6px 24px rgba(0,0,0,0.06);
+            border: 1px solid #e8dfd0;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        .concept-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+            border-color: #e6a756;
+        }
+        .concept-card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            display: block;
+        }
+        .concept-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            color: #1a1a2e;
+        }
+        .concept-card p {
+            color: #5a4e40;
+            font-size: 0.95rem;
+        }
+        /* 分类区域 */
+        .category-section {
+            background: #eae3d7;
+        }
+        .category-tabs {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 40px;
+        }
+        .category-tab {
+            padding: 10px 26px;
+            background: #fffdf8;
+            border: 1px solid #d5c9b8;
+            border-radius: 40px;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+            color: #4a3f33;
+        }
+        .category-tab:hover {
+            border-color: #e6a756;
+            background: #fdf6ec;
+        }
+        .category-tab.active {
+            background: #1a1a2e;
+            color: #f0e6d2;
+            border-color: #1a1a2e;
+        }
+        /* 角色卡 */
+        .character-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 24px;
+        }
+        .character-card {
+            background: #fffdf8;
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
+            border: 1px solid #e0d5c5;
+            transition: all 0.3s;
+        }
+        .character-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+        }
+        .character-avatar {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background: linear-gradient(145deg, #e6a756, #c77d2e);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.2rem;
+            margin: 0 auto 16px;
+            color: #fff;
+            box-shadow: 0 4px 14px rgba(199,125,46,0.3);
+        }
+        .character-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 6px;
+        }
+        .character-card .tag {
+            display: inline-block;
+            background: #f0e6d8;
+            color: #7a5a2e;
+            padding: 3px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin: 4px 3px;
+        }
+        .character-card p {
+            font-size: 0.85rem;
+            color: #7a6f5f;
+            margin-top: 10px;
+        }
+        /* 世界观与魔法体系 */
+        .magic-system {
+            background: #f5f0e8;
+        }
+        .system-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+        .system-text h3 {
+            font-size: 1.6rem;
+            color: #1a1a2e;
+            margin-bottom: 20px;
+            border-left: 4px solid #e6a756;
+            padding-left: 16px;
+        }
+        .system-text p {
+            margin-bottom: 16px;
+        }
+        .system-list {
+            list-style: none;
+        }
+        .system-list li {
+            padding: 10px 0;
+            border-bottom: 1px dashed #d5c9b8;
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+        }
+        .system-list .num {
+            background: #e6a756;
+            color: #fff;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.85rem;
+            flex-shrink: 0;
+            margin-top: 4px;
+        }
+        .quote-block {
+            background: #fffdf8;
+            border-radius: 16px;
+            padding: 30px;
+            border-left: 4px solid #e6a756;
+            font-style: italic;
+            color: #4a3f33;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+        }
+        /* 作品推荐 */
+        .works-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        .work-card {
+            background: #fffdf8;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+            border: 1px solid #e8dfd0;
+            transition: all 0.3s;
+        }
+        .work-card:hover {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transform: translateY(-3px);
+        }
+        .work-cover {
+            height: 160px;
+            background: linear-gradient(145deg, #3a2a4a, #6b3f2a);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #f0e6d2;
+            font-size: 2.5rem;
+        }
+        .work-body {
+            padding: 24px;
+        }
+        .work-body h3 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+        .work-body .meta {
+            color: #9a8c7a;
+            font-size: 0.85rem;
+            margin-bottom: 12px;
+        }
+        .work-body p {
+            font-size: 0.9rem;
+            color: #5a4e40;
+        }
+        /* 创作技巧 */
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+        }
+        .tip-item {
+            background: #fffdf8;
+            padding: 28px;
+            border-radius: 12px;
+            border: 1px solid #e8dfd0;
+            position: relative;
+        }
+        .tip-item::before {
+            content: "✦";
+            position: absolute;
+            top: 16px;
+            right: 20px;
+            color: #e6a756;
+            font-size: 1.4rem;
+        }
+        .tip-item h3 {
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+            color: #1a1a2e;
+        }
+        .tip-item p {
+            font-size: 0.9rem;
+            color: #5a4e40;
+        }
+        /* 创作过程 */
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .step {
+            text-align: center;
+            padding: 30px 16px;
+            background: #fffdf8;
+            border-radius: 16px;
+            border: 1px solid #e8dfd0;
+            position: relative;
+        }
+        .step .step-num {
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            border-radius: 50%;
+            background: #1a1a2e;
+            color: #e6a756;
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin: 0 auto 16px;
+        }
+        .step h4 {
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+        .step p {
+            font-size: 0.85rem;
+            color: #7a6f5f;
+        }
+        /* FAQ */
+        .faq-section {
+            background: #eae3d7;
+        }
+        .faq-list {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            background: #fffdf8;
+            border-radius: 12px;
+            margin-bottom: 16px;
+            border: 1px solid #d5c9b8;
+            overflow: hidden;
+        }
+        .faq-q {
+            padding: 20px 24px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #faf5ec;
+            transition: background 0.3s;
+            font-size: 1.05rem;
+        }
+        .faq-q:hover {
+            background: #f0e6d8;
+        }
+        .faq-q .arrow {
+            transition: transform 0.3s;
+            color: #e6a756;
+            font-size: 1.2rem;
+        }
+        .faq-a {
+            padding: 0 24px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.3s;
+            color: #4a3f33;
+            font-size: 0.95rem;
+        }
+        .faq-a-inner {
+            padding-bottom: 20px;
+            border-top: 1px dashed #d5c9b8;
+            padding-top: 16px;
+        }
+        .faq-item.open .faq-a {
+            max-height: 500px;
+            padding: 16px 24px;
+            padding-bottom: 20px;
+        }
+        .faq-item.open .faq-q .arrow {
+            transform: rotate(45deg);
+        }
+        .faq-item.open .faq-q {
+            background: #fdf6ec;
+        }
+        /* 页脚 */
+        .site-footer {
+            background: #1a1a2e;
+            color: #b0a58a;
+            padding: 60px 0 30px;
+            text-align: center;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        .footer-links a {
+            color: #c9bea8;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+        .footer-links a:hover {
+            color: #e6a756;
+        }
+        .footer-copy {
+            font-size: 0.85rem;
+            border-top: 1px solid #2d2a3e;
+            padding-top: 24px;
+            margin-top: 24px;
+            color: #7a6f6f;
+        }
+        /* 响应式 */
+        @media (max-width: 992px) {
+            .system-layout {
+                grid-template-columns: 1fr;
+            }
+            .process-steps {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                gap: 12px;
+                text-align: center;
+            }
+            .main-nav ul {
+                justify-content: center;
+            }
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .hero {
+                padding: 60px 0 80px;
+            }
+            .section {
+                padding: 50px 0;
+            }
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+            .footer-links {
+                gap: 16px;
+            }
+        }
+        @media (max-width: 480px) {
+            .btn-group {
+                flex-direction: column;
+                align-items: center;
+            }
+            .btn {
+                width: 100%;
+                max-width: 260px;
+                text-align: center;
+            }
+            .category-tab {
+                padding: 8px 18px;
+                font-size: 0.8rem;
+            }
+            .hero h1 {
+                font-size: 1.9rem;
+            }
+        }
+        /* 装饰 */
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, #d5c9b8, transparent);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .fox-emoji {
+            display: inline-block;
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+    </style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+    <!-- 头部 -->
+    <header class="site-header">
+        <div class="wrapper header-inner">
+            <div class="brand">
+                <span class="brand-icon fox-emoji">🦊</span>
+                <span class="brand-name">妖狐魔法师<small>FOX MAGE ARCHIVE</small></span>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li class="active"><a href="#concept">核心设定</a></li>
+                    <li><a href="#characters">角色图鉴</a></li>
+                    <li><a href="#magic">魔法体系</a></li>
+                    <li><a href="#works">代表作品</a></li>
+                    <li><a href="#tips">创作技巧</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero 首屏 -->
+    <section class="hero">
+        <div class="wrapper hero-content">
+            <span class="hero-kicker">✦ 奇幻角色研究 · 创作灵感库 ✦</span>
+            <h1>妖狐<span>魔法师</span>：跨越兽性与奥术的神秘存在</h1>
+            <p>当千年狐妖的灵性与人类魔法师的智慧交融，诞生了奇幻世界中最具魅力的角色类型。从东方传说走向西方奇幻，妖狐魔法师承载着野性与优雅的永恒矛盾。这里为你深入解析这一独特设定的每一面。</p>
+            <div class="btn-group">
+                <a href="#magic" class="btn btn-primary">探索魔法体系</a>
+                <a href="#characters" class="btn btn-outline">浏览角色图鉴</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心概念设定 -->
+    <section class="section" id="concept">
+        <div class="wrapper">
+            <div class="section-title">
+                <h2>妖狐魔法师的核心设定</h2>
+                <p>理解这一角色的本质，是塑造动人故事的前提。我们拆解其最关键的构成要素。</p>
+            </div>
+            <div class="concept-grid">
+                <article class="concept-card">
+                    <span class="icon">🦊</span>
+                    <h3>血脉与传承</h3>
+                    <p>妖狐血脉赋予其天生的灵术亲和与变形能力。在多数设定中，妖狐一族拥有九尾进化阶梯，每增加一尾都意味着魔力层次的跃升。魔法师的身份则是后天研习或血脉觉醒的结果，两种力量体系的碰撞往往构成角色成长的核心冲突。</p>
+                </article>
+                <article class="concept-card">
+                    <span class="icon">✨</span>
+                    <h3>魔法与妖术的融合</h3>
+                    <p>妖狐魔法师并非简单叠加两种职业，而是将狐族的幻术、魅惑、火焰操控等天赋能力与正统魔法体系深度融合。这种融合创造了独特的战斗风格和施法方式，例如以狐火为媒介的咒文吟唱，或以九尾为法杖的增幅仪式。</p>
+                </article>
+                <article class="concept-card">
+                    <span class="icon">⚖️</span>
+                    <h3>双重身份的挣扎</h3>
+                    <p>处于人类社会与妖怪社会之间的尴尬位置，妖狐魔法师往往面临身份认同危机。他们既被人类魔法师议会猜忌，又被传统妖族视为叛徒。这种内在与外在的双重矛盾，为角色提供了丰富的戏剧张力与深度发展空间。</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 角色分类 -->
+    <section class="section category-section" id="characters">
+        <div class="wrapper">
+            <div class="section-title">
+                <h2>妖狐魔法师角色图鉴</h2>
+                <p>不同类型的妖狐魔法师拥有截然不同的气质与能力侧重点，了解这些原型有助于塑造立体角色。</p>
+            </div>
+            <div class="category-tabs">
+                <button class="category-tab active" data-cat="all">全部</button>
+                <button class="category-tab" data-cat="flame">炎狐</button>
+                <button class="category-tab" data-cat="ice">冰狐</button>
+                <button class="category-tab" data-cat="thunder">雷狐</button>
+                <button class="category-tab" data-cat="phantom">幻影狐</button>
+            </div>
+            <div class="character-grid" id="charGrid">
+                <!-- 卡片由JS动态渲染，此处为静态初始内容 -->
+                <article class="character-card" data-type="flame">
+                    <div class="character-avatar">🔥</div>
+                    <h3>烬炎·九尾</h3>
+                    <div>
+                        <span class="tag">炎系</span>
+                        <span class="tag">九尾</span>
+                    </div>
+                    <p>以狐火焚尽一切，却内心温柔。擅长将火焰压缩成符文进行精准打击。</p>
+                </article>
+                <article class="character-card" data-type="ice">
+                    <div class="character-avatar">❄️</div>
+                    <h3>霜怜</h3>
+                    <div>
+                        <span class="tag">冰系</span>
+                        <span class="tag">六尾</span>
+                    </div>
+                    <p>冷静而疏离的冰狐魔法师，她的魔法能将敌人的时间冻结在刹那。</p>
+                </article>
+                <article class="character-card" data-type="thunder">
+                    <div class="character-avatar">⚡</div>
+                    <h3>雷牙</h3>
+                    <div>
+                        <span class="tag">雷系</span>
+                        <span class="tag">八尾</span>
+                    </div>
+                    <p>暴躁的雷狐战士，将雷电缠绕于双爪，近战魔法双修的代表。</p>
+                </article>
+                <article class="character-card" data-type="phantom">
+                    <div class="character-avatar">🌫️</div>
+                    <h3>雾隐</h3>
+                    <div>
+                        <span class="tag">幻术</span>
+                        <span class="tag">五尾</span>
+                    </div>
+                    <p>行走在梦境与现实之间的幻影狐，她的迷宫术从未有人破解。</p>
+                </article>
+                <article class="character-card" data-type="flame">
+                    <div class="character-avatar">🌋</div>
+                    <h3>赤瞳</h3>
+                    <div>
+                        <span class="tag">火山</span>
+                        <span class="tag">七尾</span>
+                    </div>
+                    <p>沉睡于火山口的古老存在，苏醒时大地都会为之颤抖。</p>
+                </article>
+                <article class="character-card" data-type="ice">
+                    <div class="character-avatar">🧊</div>
+                    <h3>雪姬</h3>
+                    <div>
+                        <span class="tag">霜雪</span>
+                        <span class="tag">四尾</span>
+                    </div>
+                    <p>出生于极北冰原的贵族，她的魔法能够冻结灵魂中的悲伤记忆。</p>
+                </article>
+                <article class="character-card" data-type="thunder">
+                    <div class="character-avatar">🌩️</div>
+                    <h3>霆翼</h3>
+                    <div>
+                        <span class="tag">雷翼</span>
+                        <span class="tag">六尾</span>
+                    </div>
+                    <p>拥有雷电双翼的空中霸主，施法时天空都会为之变色。</p>
+                </article>
+                <article class="character-card" data-type="phantom">
+                    <div class="character-avatar">🎭</div>
+                    <h3>千面</h3>
+                    <div>
+                        <span class="tag">易容</span>
+                        <span class="tag">三尾</span>
+                    </div>
+                    <p>掌握千种面容的间谍大师，没人见过她的真实面目。</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 魔法体系 -->
+    <section class="section magic-system" id="magic">
+        <div class="wrapper">
+            <div class="section-title">
+                <h2>妖狐魔法师的魔法体系</h2>
+                <p>融合妖术与奥术的独特施法系统，我们拆解其运作原理与表现形式。</p>
+            </div>
+            <div class="system-layout">
+                <div class="system-text">
+                    <h3>妖力与魔力的双轨运作</h3>
+                    <p>妖狐魔法师体内的能量流动与普通魔法师有着本质区别。他们拥有两条并行不悖的能量通道：一条源于妖族血统的妖力（常表现为灵兽形态），另一条是通过冥想与研习获得的魔力。这种双轨能量系统允许他们同时施展两种截然不同的法术，但控制难度也成倍增加。</p>
+                    <p>当妖力与魔力达到完美平衡时，妖狐魔法师可以进入“觉醒”状态，此时九条尾巴会如光环般展开，每一尾都代表一种独立的施法单元，能够同时进行多重施法。</p>
+                    <blockquote class="quote-block">
+                        “真正的妖狐魔法师，不是驾驭两种力量，而是让它们成为彼此的桥梁。”
+                    </blockquote>
+                </div>
+                <div>
+                    <ul class="system-list">
+                        <li>
+                            <span class="num">1</span>
+                            <div>
+                                <strong>狐火咒术</strong>
+                                <p>将妖狐本命火焰与咒文结合，可变化为武器、护盾或使魔，是基础且万能的施法方式。</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="num">2</span>
+                            <div>
+                                <strong>九尾增幅</strong>
+                                <p>每条尾巴都能独立储存魔力，在关键时刻释放。九尾全开时，魔法威力呈几何级数增长。</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="num">3</span>
+                            <div>
+                                <strong>幻术编织</strong>
+                                <p>利用狐族与生俱来的幻术天赋，构建以假乱真的精神世界，甚至能够影响现实空间。</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="num">4</span>
+                            <div>
+                                <strong>契约召唤</strong>
+                                <p>与元素精灵或古代生物签订契约，借助外力弥补自身魔法领域的短板。</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="num">5</span>
+                            <div>
+                                <strong>觉醒·狐神形态</strong>
+                                <p>传说中妖狐魔法师将妖力与魔力完全融合后，能够短暂化身为远古狐神，掌握时空法则。</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 代表作品 -->
+    <section class="section" id="works">
+        <div class="wrapper">
+            <div class="section-title">
+                <h2>值得参考的代表作品</h2>
+                <p>在文学、漫画与影视作品中，妖狐魔法师这一形象不断被刷新定义。以下是一些极具参考价值的作品方向。</p>
+            </div>
+            <div class="works-grid">
+                <article class="work-card">
+                    <div class="work-cover">📖</div>
+                    <div class="work-body">
+                        <h3>东方仙侠体系中的狐仙法师</h3>
+                        <div class="meta">文学 · 古典传奇</div>
+                        <p>从《聊斋》到现代仙侠小说，狐仙法师常以亦正亦邪的姿态出现。她们精通五行法术，又深谙人心。重点研究其“以情入道”的修炼逻辑。</p>
+                    </div>
+                </article>
+                <article class="work-card">
+                    <div class="work-cover">🎮</div>
+                    <div class="work-body">
+                        <h3>西方奇幻中的狐族奥术师</h3>
+                        <div class="meta">游戏 · 奇幻设定</div>
+                        <p>在欧美RPG中，狐族奥术师往往被设定为灵巧的施法者。他们擅长附魔与变形术，与精灵法师形成鲜明对比。关注其敏捷型施法的动作设计。</p>
+                    </div>
+                </article>
+                <article class="work-card">
+                    <div class="work-cover">🎬</div>
+                    <div class="work-body">
+                        <h3>国漫中的妖狐魔法师</h3>
+                        <div class="meta">动漫 · 国风新编</div>
+                        <p>近年国漫涌现出许多将传统狐仙元素与现代魔法设定结合的作品。这些角色往往在酷炫的战斗中融入水墨美学，创造了独特的视觉语言。</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 创作技巧 -->
+    <section class="section" id="tips">
+        <div class="wrapper">
+            <div class="section-title">
+                <h2>从零开始创作妖狐魔法师</h2>
+                <p>如果你想在自己的故事中塑造一位令人难忘的妖狐魔法师，以下方法或许能为你提供灵感。</p>
+            </div>
+            <div class="tips-grid">
+                <article class="tip-item">
+                    <h3>确立力量代价</h3>
+                    <p>任何强大的力量都需要代价。是每使用一次高级魔法就消耗一条尾巴的寿命？还是每次变身都会逐渐失去人类情感？明确的代价设定能让角色更加真实可信。</p>
+                </article>
+                <article class="tip-item">
+                    <h3>设计独特施法媒介</h3>
+                    <p>妖狐魔法师可以有专属的施法工具，如刻满符文的狐尾法杖、蕴含先祖灵魂的玉佩，或是能够储存魔法的特制符纸。独特的媒介能增强角色的辨识度。</p>
+                </article>
+                <article class="tip-item">
+                    <h3>赋予矛盾性格</h3>
+                    <p>妖狐的狡黠与魔法师的严谨往往互相冲突。让角色在关键时刻展现出出人意料的抉择，比单纯的力量展示更能打动读者。</p>
+                </article>
+                <article class="tip-item">
+                    <h3>构建专属世界观</h3>
+                    <p>妖狐魔法师存在于什么样的世界？妖怪与人类是和平共处还是暗中对立？魔法协会如何看待妖狐施法者？这些背景设定决定了角色的行为边界。</p>
+                </article>
+            </div>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-num">1</div>
+                    <h4>定义血脉</h4>
+                    <p>选择妖狐的种族渊源，是东方灵狐、西方变种还是异界生物？不同血统决定基础天赋。</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">2</div>
+                    <h4>选择魔法学派</h4>
+                    <p>专精火焰、幻术、寒冰还是时空？魔法学派要与狐族天赋形成互补或反差。</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">3</div>
+                    <h4>寻找身份冲突</h4>
+                    <p>角色是否被人类社会接纳？是否被妖族排斥？冲突是驱动故事发展的引擎。</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">4</div>
+                    <h4>设定成长路线</h4>
+                    <p>从几尾开始？最终能进化到几尾？每段成长需要付出什么？清晰路线让读者期待。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq-section" id="faq">
+        <div class="wrapper">
+            <div class="section-title">
+                <h2>关于妖狐魔法师的常见疑问</h2>
+                <p>我们收集了读者与创作者最关心的一些问题，并给出参考性的解答。</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-q">妖狐魔法师与普通狐妖有什么区别？<span class="arrow">+</span></div>
+                    <div class="faq-a"><div class="faq-a-inner">普通狐妖主要依赖天赋妖术和变形能力，而妖狐魔法师在此之上系统学习了人类或精灵的魔法理论。他们能够理解并运用魔法阵、咒文等学术性施法方式，在战术选择上更加多样化。简单来说，狐妖是本能施法者，而妖狐魔法师是经过专业训练的学术型施法者。</div></div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">妖狐魔法师可以有多少条尾巴？<span class="arrow">+</span></div>
+                    <div class="faq-a"><div class="faq-a-inner">不同世界观有不同的设定。最经典的是“九尾最高”说，即狐妖最高能修炼到九尾，每一尾代表百年修为。但在部分现代奇幻作品中，也存在超越九尾的“十尾”或“神尾”设定。建议根据你的故事力量体系来定，保持内部逻辑自洽即可。</div></div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">如何让妖狐魔法师角色不显得玛丽苏？<span class="arrow">+</span></div>
+                    <div class="faq-a"><div class="faq-a-inner">关键在于限制与代价。给角色设定明确的弱点：比如对某种金属过敏、在月圆之夜会失控、或者使用强大魔法后需要长时间恢复。同时让角色在人际关系上遭遇挫折，不要所有角色都围绕主角转。强大的能力配上鲜明的性格缺陷，角色就立体了。</div></div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">妖狐魔法师适合出现在什么类型的故事里？<span class="arrow">+</span></div>
+                    <div class="faq-a"><div class="faq-a-inner">妖狐魔法师具有极高的适应性。在东方玄幻中，他们是仙侠世界的异类天才；在西方奇幻中，他们是神秘东方的来客；在现代都市异能中，他们是隐藏于人类社会的神秘守护者。只要处理好力量体系与世界观的关系，几乎任何奇幻故事都能容纳这一角色。</div></div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-q">创作妖狐魔法师时最容易犯的错误是什么？<span class="arrow">+</span></div>
+                    <div class="faq-a"><div class="faq-a-inner">最常见的错误是将妖狐魔法师简单写成“会魔法的狐狸”或“有狐狸耳朵的魔法师”，没有体现出两种身份融合的化学反应。好的妖狐魔法师应该同时具备狐性的狡猾、野性、魅力与魔法师的理性、智慧、求知欲，并在两者之间产生有趣的张力。</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="site-footer">
+        <div class="wrapper">
+            <div class="footer-links">
+                <a href="#concept">核心设定</a>
+                <a href="#characters">角色图鉴</a>
+                <a href="#magic">魔法体系</a>
+                <a href="#works">代表作品</a>
+                <a href="#tips">创作技巧</a>
+                <a href="#faq">常见问题</a>
+            </div>
+            <p style="margin-bottom: 8px; font-size: 1.1rem; color: #e6a756;">🦊 妖狐魔法师 · 奇幻角色创作灵感库</p>
+            <p class="footer-copy">本页面所展示的角色与设定均为示例性创作参考，旨在为奇幻文学与角色设计爱好者提供灵感。如有雷同，纯属巧合。</p>
+            <p class="footer-copy" style="border-top: none; margin-top: 8px; padding-top: 0;">© 2024 妖狐魔法师研究站 · 以热爱之名，探索奇幻无限可能</p>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ 折叠交互
+        document.querySelectorAll('.faq-q').forEach(function(q) {
+            q.addEventListener('click', function() {
+                var item = this.parentElement;
+                // 关闭其他项
+                document.querySelectorAll('.faq-item').forEach(function(other) {
+                    if (other !== item) {
+                        other.classList.remove('open');
+                    }
+                });
+                item.classList.toggle('open');
+            });
+        });
+
+        // 角色分类筛选功能
+        var tabs = document.querySelectorAll('.category-tab');
+        var cards = document.querySelectorAll('.character-card');
+
+        tabs.forEach(function(tab) {
+            tab.addEventListener('click', function() {
+                // 更新active状态
+                tabs.forEach(function(t) { t.classList.remove('active'); });
+                this.classList.add('active');
+
+                var filter = this.getAttribute('data-cat');
+                cards.forEach(function(card) {
+                    if (filter === 'all' || card.getAttribute('data-type') === filter) {
+                        card.style.display = '';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+                          </html>
